@@ -2,20 +2,21 @@ import React from 'react';
 
 import './App.css';
 
-import { KintoneRestAPIClient } from "@kintone/rest-api-client";
+ import { KintoneRestAPIClient } from "@kintone/rest-api-client";
 
 const client = new KintoneRestAPIClient({
   baseUrl: "https://rdmuhwtt6gx7.cybozu.com/",
   auth: {
-    apiToken: process.env.KINTONE_TOKEN,
+    apiToken: process.env.REACT_APP_KINTONE_TOKEN,
   },
 });
 
 function App() {
 
   const clickHandler = () => {
-    console.log(process.env.KINTONE_TOKEN)
-    client.record.addRecord({app: "173", record: {fullName: {value: "hello"}}})
+
+    console.log(process.env.REACT_APP_KINTONE_TOKEN)
+     client.record.addRecord({app: "173", record: {fullName: {value: "hello"}}})
   }
 
   return (
