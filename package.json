@@ -4,6 +4,7 @@
   "homepage": ".",
   "private": true,
   "dependencies": {
+    "@kintone/rest-api-client": "^2.0.34",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
